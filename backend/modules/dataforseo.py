@@ -30,7 +30,7 @@ class DataForSEOClient:
     def get_keyword_suggestions(self, keyword, location_code=2840, language_code="en"):
         """Returns keyword ideas based on a seed keyword."""
         payload = [{
-            "keyword": keyword,
+            "keywords": [keyword],
             "location_code": location_code,
             "language_code": language_code,
             "include_seed": True,

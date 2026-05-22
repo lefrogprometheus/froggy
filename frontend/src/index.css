@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-[#050505] text-slate-300 font-sans selection:bg-emerald-500/30;
+  }
+}
+
+/* Custom Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- TYPOGRAPHY & SPACING --- */
+
+.text-body {
+  @apply text-slate-300 font-medium leading-relaxed;
+}
+
+/* Markdown Rendering Engine Styling */
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply text-emerald-500 font-black uppercase tracking-widest mt-16 mb-8 block border-l-4 border-emerald-500 pl-6;
+}
+
+.prose p {
+  @apply text-slate-300 font-medium text-base leading-loose mb-10;
+}
+
+.prose ul, .prose ol {
+  @apply space-y-6 mb-10 list-inside;
+}
+
+.prose li {
+  @apply text-slate-300 font-medium list-disc ml-6;
+}
+
+.prose strong {
+  @apply text-white font-black;
+}
+
+.prose hr {
+  @apply border-white/5 my-20;
+}
+
+/* Markdown Table Styling */
+.prose table {
+  @apply w-full border-collapse my-12 text-left text-xs bg-black/20 rounded-3xl overflow-hidden shadow-2xl;
+}
+.prose thead {
+  @apply border-b border-emerald-500/30 bg-emerald-500/5;
+}
+.prose th {
+  @apply p-6 font-black uppercase tracking-widest text-emerald-500;
+}
+.prose td {
+  @apply p-6 border-b border-white/5 text-slate-300 font-medium leading-relaxed;
+}
+.prose tr:hover {
+  @apply bg-emerald-500/5 transition-colors;
+}
+
+/* UI Components */
+.text-shadow-glow {
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+}
+
+.card-glass {
+  @apply bg-[#0a0a0a]/80 backdrop-blur-xl border border-white/[0.03] shadow-2xl;
+}
+
+.card-hero {
+  @apply bg-[#0a0a0a] border border-emerald-500/20 shadow-[0_0_50px_rgba(16,185,129,0.1)] rounded-[3rem] p-12 transition-all duration-700 hover:shadow-[0_0_80px_rgba(16,185,129,0.2)] hover:border-emerald-500/40;
+}
