@@ -17,7 +17,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import HemingwayEditor from './components/features/content/HemingwayEditor';
 import ExpertWriter from './components/features/content/ExpertWriter';
 
-const API_BASE = 'https://honest-feet-wash.loca.lt';
+const API_BASE = 'https://froggy-production-c030.up.railway.app';
 
 const App = () => {
   // --- AGENCY PIPELINE STATE ---
